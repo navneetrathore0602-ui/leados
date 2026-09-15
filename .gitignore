@@ -1,0 +1,32 @@
+# Security & Environment Files
+.env
+*.env
+.env.*
+backend/.env
+
+# Python & Dependencies
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+venv/
+.venv/
+env/
+
+# Node / Frontend & Build Outputs
+node_modules/
+.next/
+out/
+build/
+dist/
+.vercel
+
+# Databases & SQLite
+*.db
+*.sqlite
+*.sqlite3
+backend/*.db
+
+# Temporary & Log files
+*.log
+scratch/
