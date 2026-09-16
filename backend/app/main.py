@@ -3,8 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.api.v1.api import api_router
 from app.core.database import engine, SessionLocal
-from app.models.base import Base
-from app.models.domain import User
+from app.models import Base, User
 from app.core.auth import get_password_hash
 
 app = FastAPI(
