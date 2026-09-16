@@ -262,4 +262,11 @@ class EnrichmentJob(Base):
     business = relationship("Business", back_populates="enrichment_jobs")
 
 
-
+class User(Base):
+    __tablename__ = "users"
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    email = Column(Text, unique=True, nullable=False, index=True)
+    hashed_password = Column(Text, nullable=False)
+    role = Column(Text, default="demo", nullable=False)  # "demo", "admin"
+    created_at = Column(DateTime, default=func.now())
+    updated_at = Column(DateTime, default=func.now(), onupdate=func.now())

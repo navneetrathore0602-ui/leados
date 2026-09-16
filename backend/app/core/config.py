@@ -13,7 +13,11 @@ class Settings(BaseSettings):
     REDIS_URL: str = "redis://localhost:6379/0"
     CORS_ORIGINS: Union[List[str], str] = ["http://localhost:3000", "http://127.0.0.1:3000"]
     
+    LEADOS_ADMIN_EMAIL: Optional[str] = None
+    LEADOS_ADMIN_PASSWORD: Optional[str] = None
+
     DISCOVERY_TEST_LIMIT: int = 10000
+
     OSM_NOMINATIM_URL: str = "https://nominatim.openstreetmap.org/search"
     OSM_USER_AGENT: str = "LeadOS/3.0"
 
